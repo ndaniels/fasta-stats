@@ -1,0 +1,9 @@
+[package]
+name = "fasta-stats"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bio = "2"
+statistical = "1.0.0"
+num-format = "0.4"
