@@ -2,6 +2,10 @@
 name = "fasta-stats"
 version = "0.1.0"
 edition = "2021"
+authors = ["Noah Daniels <noah_daniels@uri.edu>"]
+description = "Simple descriptive statistics on FASTA (biological sequence) data"
+license = "MIT"
+readme = "README.md"
 
 [dependencies]
 bio = "2"
