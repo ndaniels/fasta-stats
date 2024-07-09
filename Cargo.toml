@@ -1,6 +1,6 @@
 [package]
 name = "fasta-stats"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Noah Daniels <noah_daniels@uri.edu>"]
 description = "Simple descriptive statistics on FASTA (biological sequence) data"
@@ -11,3 +11,4 @@ readme = "README.md"
 bio = "2"
 statistical = "1.0.0"
 num-format = "0.4"
+rayon = "1.1"
