@@ -7,14 +7,6 @@ pub fn par_mean(v: &[usize]) -> f64 {
     sum as f64 / l
 }
 
-pub fn par_min(v: &[usize]) -> usize {
-    *v.par_iter().min().unwrap()
-}
-
-pub fn par_max(v: &[usize]) -> usize {
-    *v.par_iter().max().unwrap()
-}
-
 pub fn par_stddev(v: &[usize], avg: Option<f64>) -> f64 {
     let mean = match avg {
         Some(val) => val,
@@ -78,15 +70,7 @@ pub fn median(data: &[usize]) -> Option<usize> {
     let size = data.len();
 
     match size {
-        even if even % 2 == 0 => {
-            let fst_med = select(data, (even / 2) - 1);
-            let snd_med = select(data, even / 2);
-
-            match (fst_med, snd_med) {
-                (Some(fst), Some(snd)) => Some(fst),
-                _ => None,
-            }
-        }
+        even if even % 2 == 0 => select(data, (even / 2) - 1),
         odd => select(data, odd / 2),
     }
 }
